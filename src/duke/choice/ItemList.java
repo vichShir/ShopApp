@@ -5,8 +5,8 @@ import io.helidon.webserver.Handler;
 import io.helidon.webserver.ServerRequest;
 import io.helidon.webserver.ServerResponse;
 
-public class ItemList implements Handler {
-	
+public class ItemList implements Handler 
+{	
 	private Clothing[] items;
 	
 	public ItemList(Clothing[] items)
@@ -22,7 +22,8 @@ public class ItemList implements Handler {
 		res.headers().put("Content-Type", "text/plain; charset=UTF-8");
 		
 		StringBuilder result = new StringBuilder();
-		for (Clothing item: items) {
+		for (Clothing item: items) 
+		{
 			result.append(item+"\n");
 		}
 		

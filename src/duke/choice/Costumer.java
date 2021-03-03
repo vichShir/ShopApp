@@ -1,5 +1,8 @@
 package duke.choice;
 
+/*
+ * author: vichShir
+ */
 public class Costumer 
 {
 	private String name;
@@ -12,12 +15,18 @@ public class Costumer
 		setSize(measurement);
 	}
 	
-	public String getName() { return name; }
+	public String getName() 
+	{ 
+		return name; 
+	}
 	
-	public String getSize() {
+	public String getSize() 
+	{
 		return size;
 	}
-	public void setSize(String size) {
+	
+	public void setSize(String size)
+	{
 		this.size = size;
 	}
 	
@@ -58,15 +67,13 @@ public class Costumer
 	public double getTotalClothingCost()
 	{
 		double total = 0.0;
-		/* Exercise 4-3: Using a loop to process an array */
+		
 		for (Clothing item: items)
 		{
-			/* Exercise 4-4: Using if statements to control flow */
 			if(getSize().equals(item.getSize()))
 			{
 				total += item.getPrice();
 				System.out.println("Item: " + item);
-				if(total > 15) { break; }
 			}
 		}
 		
